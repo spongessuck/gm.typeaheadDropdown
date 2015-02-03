@@ -16,8 +16,8 @@ angular.module('gm.typeaheadDropdown', ['gm.typeaheadDropdown.tpl', 'ui.bootstra
 			
 			var arrayOrPromise = $scope.getOptions();
 
-			if(arrayOrPromise.success)
-				arrayOrPromise.success(setOptions);
+			if(arrayOrPromise.then)
+				arrayOrPromise.then(setOptions);
 			else if(arrayOrPromise.result)
 				arrayOrPromise.result.then(setOptions);
 			else
