@@ -5,7 +5,8 @@ angular.module('gm.typeaheadDropdown', ['gm.typeaheadDropdown.tpl', 'ui.bootstra
 		scope: {
 			model:'=ngModel',
 			getOptions:'&options',
-			config:'=?'
+			config:'=?',
+			required:'=?ngRequired'
 		},
 		replace:true,
 		controller: ['$scope', function($scope) {
