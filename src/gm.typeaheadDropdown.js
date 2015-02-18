@@ -9,25 +9,17 @@ angular.module('gm.typeaheadDropdown', ['gm.typeaheadDropdown.tpl', 'ui.bootstra
 			required:'=?ngRequired'
 		},
 		replace:true,
-		controller: ['$scope', function($scope) {
+		controller: ['$scope', '$q', function($scope, $q) {
 			$scope.config = angular.extend({
 				modelLabel:"name",
 				optionLabel:"name"
 			}, $scope.config);
 			
-			var arrayOrPromise = $scope.getOptions();
-
-			if(arrayOrPromise.then)
-				arrayOrPromise.then(setOptions);
-			else if(arrayOrPromise.result)
-				arrayOrPromise.result.then(setOptions);
-			else
-				setOptions(arrayOrPromise);
-			
-			function setOptions(options) {
+			$q.when($scope.getOptions())
+			.then(function(options) {
 				$scope.options = options;
-			}
-
+			});
+			
 			$scope.onSelect = function($item, $model, $label) {
 				angular.extend($scope.model, $item);
 				$scope.model[$scope.config.modelLabel] = $item[$scope.config.optionLabel];

@@ -2,7 +2,7 @@
   "name": "gm.typeaheadDropdown",
   "description": "AngularJS directive combining UI Bootstrap's Typeahead component with a dropdown component.",
   "repository": "https://github.com/spongessuck/gm.typeaheadDropdown",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "devDependencies": {
     "grunt": "~0.4.5",
     "grunt-contrib-concat": "^0.5.0",

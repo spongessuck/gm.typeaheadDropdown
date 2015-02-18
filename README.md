@@ -6,7 +6,7 @@ You can use the following markup for a simple component:
 
     <typeahead-dropdown ng-model='selectedOption' options='options'></typeahead-dropdown>
 
-The 'options' attribute must reference either an array of objects, or a $q-like or $http promise that will return an array of objects when resolved.
+The 'options' attribute must reference either an array of objects or a $q-like or $http promise that will return an array of objects when resolved.
 
 By default, the directive will use a property 'name' in the object to use as the label for the model and the options. When an option is selected, the option's properties are extended onto the model.
 

@@ -1,0 +1,23 @@
+{
+  "name": "gm.typeaheadDropdown",
+  "version": "1.0.2",
+  "authors": [
+    "Greg McGee <spongessuck@gmail.com>"
+  ],
+  "main": "dist/gm.typeaheadDropdown.min.js",
+  "keywords": [
+    "angular",
+		"angular-bootstrap"
+		"typeahead",
+		"dropdown"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "node_modules"
+  ],
+  "dependencies": {
+    "angular": "~1.2.0",
+    "angular-bootstrap-": "~0.12.0"
+  },
+  "devDependencies": {}
+}
