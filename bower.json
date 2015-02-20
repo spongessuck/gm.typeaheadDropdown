@@ -1,32 +1,32 @@
 {
-	"name": "gm.typeaheadDropdown",
-	"version": "1.0.2",
-	"homepage": "https://github.com/spongessuck/gm.typeaheadDropdown",
-	"authors": [
-		"Greg McGee <spongessuck@gmail.com>"
-	],
-	"description": "AngularJS directive combining UI Bootstrap's Typeahead and Dropdown components.",
-	"main": "dist/gm.typeaheadDropdown.min.js",
-	"moduleType": [
-		"node"
-	],
-	"keywords": [
-		"angular",
-		"bootstrap",
-		"ui.bootstrap",
-		"typeahead",
-		"dropdown"
-	],
-	"license": "MIT",
-	"ignore": [
-		"**/.*",
-		"node_modules",
-		"bower_components",
-		"test",
-		"tests"
-	],
+  "name": "gm.typeaheadDropdown",
+  "version": "1.0.2",
+  "homepage": "https://github.com/spongessuck/gm.typeaheadDropdown",
+  "authors": [
+    "Greg McGee <spongessuck@gmail.com>"
+  ],
+  "description": "AngularJS directive combining UI Bootstrap's Typeahead component with a dropdown component.",
+  "main": "dist/gm.typeaheadDropdown.min.js",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "angular",
+    "bootstrap",
+    "ui.bootstrap",
+    "typeahead",
+    "dropdown"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
 	"dependencies": {
 		"angular": ">=1.2.0",
-		"angular-bootstrap": ">=0.12.0"
+		"angular-bootstrap": ">0.12.0"
 	}
 }
