@@ -1,8 +1,8 @@
 module.exports = function(grunt) {
-	
+
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
-		
+
 		uglify: {
 			options: {
 				banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
@@ -13,9 +13,9 @@ module.exports = function(grunt) {
 				dest: 'dist/gm.typeaheadDropdown.min.js'
 			}
 		},
-		
+
 		/*htmlmin: {
-			def: { 
+			def: {
 				options: {
 					removeComments: true,
 					collapseWhitespace: true
@@ -25,21 +25,22 @@ module.exports = function(grunt) {
 				}
 			}
 		},*/
-		
+
 		concat: {
 			options: {
 				stripBanners: true
 			},
 			def: {
-				src: ['build/template_cache.js', 'src/gm.typeaheadDropdown.js'],
+				src: ['src/gm.typeaheadDropdown.js', 'build/template_cache.js'],
 				dest: 'build/gm.typeaheadDropdown.js',
 			}
 		},
-		
+
 		html2js: {
 			options: {
-				module:'gm.typeaheadDropdown.tpl',
+				module:'gm.typeaheadDropdown',
 				singleModule:true,
+				existingModule:true,
 				htmlmin: {
 					collapseBooleanAttributes: true,
 					collapseWhitespace: true,
@@ -56,7 +57,7 @@ module.exports = function(grunt) {
 				dest: 'build/template_cache.js'
 			},
 		},
-		
+
 		watch: {
 			scripts: {
 				files: 'src/*.js',
@@ -68,11 +69,11 @@ module.exports = function(grunt) {
 			},
 		}
 	});
-	
+
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-html2js');
-	
+
 	grunt.registerTask('default', ['html2js', 'concat', 'uglify']);
 };
