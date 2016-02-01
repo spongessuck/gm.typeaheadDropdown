@@ -3,7 +3,7 @@
 	<div ng-if='options' class='dropdown' dropdown>
 		<!-- This needs UI Bootstrap 0.12 to work -->
 		<div class='input-group'>
-			<input type='text' class='form-control' placeholder='Select or type...' ng-model='model[config.modelLabel]' typeahead="op[config.optionLabel] for op in options | filter:$viewValue | limitTo:8" typeahead-editable='false' typeahead-on-select='onSelect($item, $model, $label)' ng-required='required' />
+			<input type='text' class='form-control' style='break-word:normal' placeholder='Select or type...' ng-model='model[config.modelLabel]' typeahead="op as op[config.optionLabel] for op in options | filter:$viewValue | limitTo:8" typeahead-editable='false' typeahead-on-select='onSelect($item, $model, $label)' ng-required='required' />
 			<span class='input-group-btn'>
 				<button class='btn btn-default dropdown-toggle' dropdown-toggle>
 					<span class='caret'></span>
