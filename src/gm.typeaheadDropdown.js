@@ -21,6 +21,8 @@ angular.module('gm.typeaheadDropdown', ['ui.bootstrap'])
 			});
 
 			$scope.onSelect = function($item, $model, $label) {
+				if(!$scope.model)
+					$scope.model = {};
 				angular.extend($scope.model, $item);
 				$scope.model[$scope.config.modelLabel] = $item[$scope.config.optionLabel];
 			}
